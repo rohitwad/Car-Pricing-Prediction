@@ -7,6 +7,27 @@
 <br/><b> 2) Feature Engineering</b>
 <br/> &emsp;i) Handling Categorical columns - Fueltype, aspiration, doornumber, enginelocation, drivewheel, enginetype, cylindernumber, carbody, fuelsystem
 <br/> &emsp;ii) Data cleaning - correct the spelling mistakes 
+<br/> &emsp;iii) Considering only company name for regression
+
+
+<br/> Splitting Train & Test Set
+<br/> Performing MinMax scaling
+
+<br/> Applying RFE-Recursive Feature Elimination
+<br/> &emsp; - It helps in identifying significant columns along with their ranking importance
+
+Using statsmodels.api to add constant to model
+Find Variance Inflation Factor (VIF)
+Remove column having VIF > 5
+Fit the model again
+Repeat till VIF is less than 5 for all columns
+Now check if any column has p-value > 0.05
+Remove that particular column 
+Fit the model again
+Repeat till p-value is less than 0.05 for all columns
+
+
+<br/> &emsp;iii) Considering only company name for regression
 <br/> <b> 3) Feature Selection</b>
 <br/> &emsp;Dropping columns : ID & Is_Lead (y), not required in model building
 <br/><b> 4) Model Creation</b>
